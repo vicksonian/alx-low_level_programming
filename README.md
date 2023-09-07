@@ -1,2 +1,2 @@
-##ALX Low-Level Programming:
+# ALX Low-Level Programming:
  Solutions to low-level programming tasks in C.
