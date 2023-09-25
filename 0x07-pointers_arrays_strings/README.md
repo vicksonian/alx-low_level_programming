@@ -1,10 +1,31 @@
+# General
+
+    What are pointers to pointers and how to use them
+    What are multidimensional arrays and how to use them
+    What are the most common C standard library functions to manipulate strings
+
+# Requirements
+## General
+
+    Allowed editors: vi, vim, emacs
+    All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+    All your files should end with a new line
+    A README.md file, at the root of the folder of the project is mandatory
+    Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+    You are not allowed to use global variables
+    No more than 5 functions per file
+    You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
+    You are allowed to use _putchar
+    You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
+    In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+    The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
+    Don’t forget to push your header file
 
 
 
 
-
-#Tasks
-##0. memset
+# Tasks
+## 0. memset
 mandatory
 
 Write a function that fills memory with a constant byte.
@@ -93,7 +114,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 0-memset.c
 
-##1. memcpy
+## 1. memcpy
 mandatory
 
 Write a function that copies memory area.
@@ -183,7 +204,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 1-memcpy.c
 
-2. strchr
+## 2. strchr
 mandatory
 
 Write a function that locates a character in a string.
@@ -226,7 +247,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 2-strchr.c
 
-3. strspn
+## 3. strspn
 mandatory
 
 Write a function that gets the length of a prefix substring.
@@ -266,7 +287,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 3-strspn.c
 
-4. strpbrk
+## 4. strpbrk
 mandatory
 
 Write a function that searches a string for any of a set of bytes.
@@ -307,7 +328,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 4-strpbrk.c
 
-5. strstr
+## 5. strstr
 mandatory
 
 Write a function that locates a substring.
@@ -348,7 +369,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 5-strstr.c
 
-6. Chess is mental torture
+## 6. Chess is mental torture
 mandatory
 
 Write a function that prints the chessboard.
@@ -397,7 +418,7 @@ Repo:
     Directory: 0x07-pointers_arrays_strings
     File: 7-print_chessboard.c
 
-7. The line of life is a ragged diagonal between duty and desire
+## 7. The line of life is a ragged diagonal between duty and desire
 mandatory
 
 Write a function that prints the sum of the two diagonals of a square matrix of integers.
@@ -446,5 +467,62 @@ Repo:
     GitHub repository: alx-low_level_programming
     Directory: 0x07-pointers_arrays_strings
     File: 8-print_diagsums.c
+
+# Advanced Tasks
+
+
+## 8. Double pointer, double fun
+###advanced
+
+Write a function that sets the value of a pointer to a char.
+
+    Prototype: void set_string(char **s, char *to);
+
+julien@ubuntu:~/0x07$ cat 100-main.c
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s0 = "Bob Dylan";
+    char *s1 = "Robert Allen";
+
+    printf("%s, %s\n", s0, s1);
+    set_string(&s1, s0);
+    printf("%s, %s\n", s0, s1);
+    return (0);
+}
+julien@ubuntu:~/0x07$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-set_string.c -o 100-set_string
+julien@ubuntu:~/0x07$ ./100-set_string 
+Bob Dylan, Robert Allen
+Bob Dylan, Bob Dylan
+julien@ubuntu:~/0x07$ 
+
+Repo:
+
+    GitHub repository: alx-low_level_programming
+    Directory: 0x07-pointers_arrays_strings
+    File: 100-set_string.c
+
+## 9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
+###advanced
+
+Create a file that contains the password for the crackme2 executable.
+
+    Your file should contain the exact password, no new line, no extra space
+    ltrace, ldd, gdb and objdump can help
+    You may need to install the openssl library to run the crakme2 program: sudo apt install libssl-dev
+    Edit the source list sudo nano /etc/apt/sources.list to add the following line: deb http://security.ubuntu.com/ubuntu xenial-security main Then sudo apt update and sudo apt install libssl1.0.0
+
+Repo:
+
+    GitHub repository: alx-low_level_programming
+    Directory: 0x07-pointers_arrays_strings
+    File: 101-crackme_password
 
 
