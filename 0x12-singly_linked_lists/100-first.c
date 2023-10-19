@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) customPrint(void);
+void __attribute__((constructor)) hare(void);
 
 /**
- * customPrint - Displays a message prior to
- *               the main function's execution.
+ * hare - Prints a string before the
+ *        main function is executed.
  */
-void customPrint(void)
+void hare(void)
 {
-    printf("You're beat! and yet, you must allow,\n"
-               "I carry my abode on my rear!\n");
+	printf("You're beat! and yet, you must allow,\n"
+	       "I bore my house upon my back!\n");
 }
