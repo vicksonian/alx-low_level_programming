@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) tortoise(void);
+void __attribute__((constructor)) customPrint(void);
 
 /**
- * tortoise - Displays a message before the main function.
+ * customPrint - Displays a message prior to
+ *               the main function's execution.
  */
-void tortoise(void)
+void customPrint(void)
 {
-	printf("You're outpaced! But still, you must admit,\n"
-	       "I carry my home on my back!\n");
+    printf("You're beat! and yet, you must allow,\n"
+               "I carry my abode on my rear!\n");
 }
-
