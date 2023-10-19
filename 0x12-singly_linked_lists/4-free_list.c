@@ -2,19 +2,18 @@
 #include <stdlib.h>
 
 /**
- * free_list - Deallocates a list_t list.
- * @list: A pointer to the list_t list.
+ * free_list - Frees a list_t list.
+ * @head: A pointer to the list_t list.
  */
-void free_list(list_t *list)
+void free_list(list_t *head)
 {
-    list_t *temp_node;
+	list_t *tmp;
 
-    while (list)
-    {
-        temp_node = list->next;
-        free(list->str);
-        free(list);
-        list = temp_node;
-    }
+	while (head)
+	{
+		tmp = head->next;
+		free(head->str);
+		free(head);
+		head = tmp;
+	}
 }
-
