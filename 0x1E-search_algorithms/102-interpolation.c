@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * interpolation_search - Searches for a value in a sorted array using Interpolation search algorithm
+ * interpolation_search - Searches for a value in a sorted array using
+ * Interpolation search algorithm
  * @array: Pointer to the first element of the array to search in
  * @size: Number of elements in the array
  * @value: Value to search for
